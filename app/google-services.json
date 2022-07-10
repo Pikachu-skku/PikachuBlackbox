@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "275519930228",
+    "firebase_url": "https://skku-pikachu-default-rtdb.firebaseio.com",
+    "project_id": "skku-pikachu",
+    "storage_bucket": "skku-pikachu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275519930228:android:7da7ecf7ab301dddb17621",
+        "android_client_info": {
+          "package_name": "pikachu.blackbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275519930228-0lpbbal2gkrif2p21n0c3k01n7pmmuga.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pikachu.blackbox",
+            "certificate_hash": "8a45f08696d57594d6119f68ce436edbeebe7ec7"
+          }
+        },
+        {
+          "client_id": "275519930228-24njcrd5tc0i7piuqf80kiqd3tnge79i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcIDBz-_-Vm0dA8dxqdh1Rm4XZXtzke8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275519930228-24njcrd5tc0i7piuqf80kiqd3tnge79i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

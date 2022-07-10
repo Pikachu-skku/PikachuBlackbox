@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelegramLoginActivity">
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_your_telegram_id_and_request_your_code" />
+
+        <EditText
+            android:id="@+id/telegram_id"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:autofillHints=""
+            android:ems="30"
+            android:inputType="text"
+            android:text="@string/tele_id"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/telegram_id_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/input" />
+
+        <LinearLayout
+            android:id="@+id/code_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/input_code_from_telegram" />
+
+            <EditText
+                android:id="@+id/register_code"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:ems="30"
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <Button
+                android:id="@+id/register_code_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/input" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

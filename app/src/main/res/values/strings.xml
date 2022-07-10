@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Pikachu-Blackbox</string>
+    <string name="input_your_telegram_id_and_request_your_code">Input your telegram Id and request your code</string>
+    <string name="tele_id">텔레그램 아이디 입력</string>
+    <string name="input">입력</string>
+    <string name="input_code_from_telegram">input code from Telegram</string>
+    <string name="exit">외출하기</string>
+    <string name="call_police">신고하기</string>
+    <string name="map_change">위치 설정 및 변경</string>
+    <string name="setting">설정</string>
+    <string name="done">완료</string>
+    <string name="exit_done">외출 종료</string>
+    <string name="emergency">응급 상황</string>
+    <string name="safe">안전합니다.</string>
+    <string name="is_emergency">당신은 응급상황인가요?</string>
+</resources>
