@@ -30,8 +30,6 @@ import java.util.function.Function;
 
 public class DangerCheckingService extends Service {
 
-    Handler handler = new Handler();
-
     boolean isRun = false;
 
     SensorManager SensorManager;
@@ -96,15 +94,17 @@ public class DangerCheckingService extends Service {
                 //TODO 자이로센서 확인
 
                 //블루투스 설정
-                @SuppressLint("MissingPermission") Set<BluetoothDevice> devices = mBluetoothAdapter.getBondedDevices();
+                if (mBluetoothAdapter != null) {
+                    @SuppressLint("MissingPermission") Set<BluetoothDevice> devices = mBluetoothAdapter.getBondedDevices();
 
-                if(devices.size() > 0){
-                    for(BluetoothDevice device : devices){
-                        @SuppressLint("MissingPermission") String[] a = device.getName().split("-");
-                        if(a[0].equals("Pikachu")){
-                            loc.setLatitude(Double.parseDouble(a[1]));
-                            loc.setLatitude(Double.parseDouble(a[2]));
-                            break;
+                    if (devices.size() > 0) {
+                        for (BluetoothDevice device : devices) {
+                            @SuppressLint("MissingPermission") String[] a = device.getName().split("-");
+                            if (a[0].equals("Pikachu")) {
+                                loc.setLatitude(Double.parseDouble(a[1]));
+                                loc.setLatitude(Double.parseDouble(a[2]));
+                                break;
+                            }
                         }
                     }
                 }
@@ -153,9 +153,6 @@ public class DangerCheckingService extends Service {
         SensorManager.registerListener(SListen, GgyroSensor, android.hardware.SensorManager.SENSOR_DELAY_UI);
 
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-    }
-
-    public void bluetoothOn() {
         if(mBluetoothAdapter == null) {
             Toast.makeText(getApplicationContext(), "블루투스를 지원하지 않는 기기입니다.", Toast.LENGTH_LONG).show();
         }
