@@ -3,6 +3,8 @@ package pikachu.blackbox;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -18,9 +20,9 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class PopupActivity extends AppCompatActivity {
+public class PopupActivity extends Dialog {
 
-    public static final String POLICE_PHONE_NUMBER = "112";
+    public static final String POLICE_PHONE_NUMBER = "010";
 
     ProgressHandler handler;
 
@@ -32,19 +34,24 @@ public class PopupActivity extends AppCompatActivity {
     TextView date_view;
     TextView reason_view;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    Context context;
+
+    public PopupActivity(@NonNull Context context, String contents){
+
+        super(context);
+
+        this.context = context;
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_popup);
+
+        handler = new ProgressHandler();
 
         date_view = findViewById(R.id.date); // 남은 시간
 
         reason_view = findViewById(R.id.reason); // 이유
 
-        Intent intent = getIntent();
-        reason_view.setText(intent.getStringExtra("reason"));
+        reason_view.setText(contents);
 
         date_view.setText(sdf.format(new Date(1000 * 60 * 60 * 6)));
 
@@ -63,7 +70,7 @@ public class PopupActivity extends AppCompatActivity {
         safe_btn.setOnClickListener(view -> {
             handler.removeCallbacksAndMessages(null);
             //TODO 비밀번호 물어보게 하기
-            finish();
+            dismiss();
         });
     }
 
@@ -77,7 +84,7 @@ public class PopupActivity extends AppCompatActivity {
     }
 
     public void callPolice(){
-        startActivity(new Intent("android.intent.action.CALL", Uri.parse("tel:" + POLICE_PHONE_NUMBER)));
+        context.startActivity(new Intent("android.intent.action.CALL", Uri.parse("tel:" + POLICE_PHONE_NUMBER)));
     }
 
     public void runTime(){
@@ -87,6 +94,12 @@ public class PopupActivity extends AppCompatActivity {
 
                 Message message = handler.obtainMessage();
                 handler.sendMessage(message);
+
+                try {
+                    Thread.sleep(10000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
 

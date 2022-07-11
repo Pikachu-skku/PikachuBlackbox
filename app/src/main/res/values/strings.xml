@@ -13,4 +13,5 @@
     <string name="emergency">응급 상황</string>
     <string name="safe">안전합니다.</string>
     <string name="is_emergency">당신은 응급상황인가요?</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

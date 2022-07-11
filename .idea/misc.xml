@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Develop/PikachuBlackbox/app/src/main/res/layout/activity_exit.xml" value="0.1" />
+        <entry key="..\:/Develop/PikachuBlackbox/app/src/main/res/layout/activity_exit.xml" value="0.15" />
         <entry key="..\:/Develop/PikachuBlackbox/app/src/main/res/layout/activity_main.xml" value="0.3619791666666667" />
-        <entry key="..\:/Develop/PikachuBlackbox/app/src/main/res/layout/activity_map_setting.xml" value="0.3619791666666667" />
+        <entry key="..\:/Develop/PikachuBlackbox/app/src/main/res/layout/activity_map_setting.xml" value="0.11578947368421053" />
+        <entry key="..\:/Develop/PikachuBlackbox/app/src/main/res/layout/activity_maps.xml" value="0.34739583333333335" />
         <entry key="..\:/Develop/PikachuBlackbox/app/src/main/res/layout/activity_popup.xml" value="0.22" />
         <entry key="..\:/Develop/PikachuBlackbox/app/src/main/res/layout/activity_telegram_login.xml" value="0.25" />
+        <entry key="..\:/Develop/PikachuBlackbox/app/src/main/res/xml/network_security_config.xml" value="0.1984375" />
       </map>
     </option>
   </component>

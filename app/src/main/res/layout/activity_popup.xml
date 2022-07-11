@@ -4,8 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:layout_height="wrap_content"
+    android:layout_gravity="center"
     tools:context=".PopupActivity">
+
+
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -13,22 +17,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="@string/is_emergency"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:background="#E91E63"
-            />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,56 +34,62 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="."
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/reason"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="."
+                android:textSize="30sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/date"
-                android:text="."
-                android:textSize="30sp"
+                android:background="#E91E63"
                 android:gravity="center"
-                android:background="#fff"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:id="@+id/reason"
-                android:text="."
-                android:textSize="30sp"
-                android:gravity="center"
-                android:background="#fff"
-                />
+                android:text="@string/is_emergency"
+                android:textSize="20sp" />
         </LinearLayout>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+            <Button
+                android:id="@+id/safe"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="#2196F3"
+                android:gravity="center"
+                android:text="@string/safe"
+                android:textSize="20sp" />
 
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:text="@string/safe"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:background="#2196F3"
-            android:id="@+id/safe"
-            />
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:text="@string/emergency"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:background="#F32121"
-            android:id="@+id/danger"
-            />
+            <Button
+                android:id="@+id/danger"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="#F32121"
+                android:gravity="center"
+                android:text="@string/emergency"
+                android:textSize="20sp" />
 
-    </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 

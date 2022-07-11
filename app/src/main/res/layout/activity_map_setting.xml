@@ -17,24 +17,26 @@
 
 
         <fragment
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:id="@+id/map"
             tools:context=".MapSetting"
+            android:layout_gravity="center"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             />
 
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="75dp"
-                android:text=""/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:text="" />
 
-            <Button
-                android:id="@+id/done"
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:text="@string/done"/>
-
+        <Button
+            android:id="@+id/done"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_gravity="center"
+            android:background="@drawable/finish_1280"
+            android:text="외출완료" />
 
 
     </LinearLayout>

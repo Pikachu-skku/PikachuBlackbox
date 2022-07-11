@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -16,24 +17,53 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-            <Button
-                android:id="@+id/exit"
-                android:layout_width="80dp"
-                android:layout_height="75dp"
-                android:text="@string/exit"/>
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:background="@drawable/door_1280"
+            android:text="@string/exit"
+            android:textAllCaps="true"
+            android:textSize="1sp"
+            android:visibility="visible" />
 
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="75dp"
-                android:text=""/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:text="" />
 
-            <Button
-                android:id="@+id/police"
-                android:layout_width="80dp"
-                android:layout_height="75dp"
-                android:text="@string/call_police"/>
+        <Button
+            android:id="@+id/police"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:background="@drawable/police_1280"
+            android:text="@string/call_police"
+            android:textSize="1sp" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="11dp"
+        android:text="외출하기"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="신고하기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
